@@ -20,6 +20,17 @@ function updateTime() {
         parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
         parisTimeElement.innerHTML = parisTime.format("h:mm:ss [<small>]A[<small>]");
     }
+
+    //Tokyo
+    let tokyoElement = document.querySelector("#paris");
+    if(tokyoElement){
+        let tokyoDateElement = document.querySelector("#tokyo .date");
+        let tokyoTimeElement = document.querySelector("#tokyo .time");
+        let tokyoTime = moment.tz("Asia/Tokyo");
+
+        tokyoDateElement.innerHTML = tokyoTime.format("MMMM Do YYYY");
+        tokyoTimeElement.innerHTML = tokyoTime.format("h:mm:ss [<small>]A[<small>]");
+    }
 }
 
 function updateCity(event){
